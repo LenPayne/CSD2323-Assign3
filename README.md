@@ -208,6 +208,10 @@ In general, on macOS and Linux, use `sudo` and edit `/etc/hosts`.
 On Windows, open a text editor with `Run as administrator` (right-click on the
 shortcut to see this option). Then edit `C:\Windows\System32\drivers\etc\hosts`.
 
+These files all have the same syntax across Windows and *NIX systems. The important
+part is that it maps an IP address to a human-readable name. Make sure that you
+put your server's IP address into the file (not your desktop's IP address).
+
 
 ## Installing WordPress
 
