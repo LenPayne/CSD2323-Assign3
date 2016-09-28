@@ -43,7 +43,7 @@ security by giving your home folder execute access. As your user, run the comman
 
 ```bash
 mkdir ~/public_html
-chmod a+x ~/public_html
+chmod a+x ~
 ```
 
 At this point, you should be able to navigate to [http://localhost/~username](http://localhost/~username)
