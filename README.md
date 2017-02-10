@@ -45,6 +45,17 @@ security by giving your home folder execute access. As your user, run the comman
 mkdir ~/public_html
 chmod a+x ~
 ```
+To simplify some issues later on, we're going to temporarily disable SELinux as
+well. SELinux is the Mandatory Access Control scheme for Red Hat based Linux
+distros and Android. It controls who gets access to what, and will cause
+problems for us later on when we install WordPress. Simply run:
+
+```bash
+sudo setenforce 0
+```
+
+This only temporarily turns off SELinux enforcement. It will be turned on next
+time you reboot the server. That's okay. Assignment 4 covers SELinux config.
 
 At this point, you should be able to navigate to [http://localhost/~username](http://localhost/~username)
 where username is your actual username, and see an empty folder index. If you put
@@ -104,18 +115,6 @@ sudo firewall-cmd --reload
 ```
 
 To verify this enabled the `http` service, run `sudo firewall-cmd --list-all`.
-
-To simplify some issues later on, we're going to temporarily disable SELinux as
-well. SELinux is the Mandatory Access Control scheme for Red Hat based Linux
-distros and Android. It controls who gets access to what, and will cause
-problems for us later on when we install WordPress. Simply run:
-
-```bash
-sudo setenforce 0
-```
-
-This only temporarily turns off SELinux enforcement. It will be turned on next
-time you reboot the server. That's okay. Assignment 4 covers SELinux config.
 
 To access the server, we also need to know its IP Address. We do this by running:
 
